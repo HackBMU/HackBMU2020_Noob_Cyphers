@@ -1,0 +1,89 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: cursive;
+    background-image: url("burger.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:420px;
+    background-color: rgb(27, 26, 26,0.5);
+    padding:50px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 15px 20px rgba(27, 26, 26, 0.644);
+}
+
+.box:hover{
+    width:450px;
+    background-color: rgb(27, 26, 26,0.7);
+    padding:60px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(27, 26, 26, 0.767);
+}
+.box h2{
+    margin:0;
+    margin-bottom:20px;
+    color: white;
+    font-size:27px;
+}
+form input{
+    width: 100%;
+    padding: 10px 5px 10px 10px;
+    margin-bottom:10px;
+    font-size:20px;
+    border: none;
+    outline:none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.733); 
+    border-bottom: 2px solid white;
+}
+form button{
+    margin-top: 18px;
+    padding: 14px 40px 14px 40px;
+    outline: none;
+    border:none;
+    border-radius:18px;
+    font-size: 15px;
+    color: white;
+    background: rgba(252, 119, 30, 0.603);
+    font-family: cursive;
+}
+form button:hover{
+    margin-top: 18px;
+    padding: 15px 41px 15px 41px;
+    outline: none;
+    border:none;
+    border-radius:18px;
+    font-size: 16px;
+    color: white;
+    background: rgba(252, 119, 30, 0.712);
+    font-family: cursive;
+}
+.links{
+    margin-top:20px;
+}
+.links a{
+    text-decoration:none;
+    color: rgba(255, 255, 255, 0.582);
+    margin-right:18px;
+}
+.links a:hover{
+    text-decoration:none;
+    color: rgba(255, 255, 255, 0.877);
+    margin-right:18px;
+}
+.msg-orange{
+    color:rgba(252, 119, 30, 0.712);
+    font-size: 16px;
+    font-family:cursive;
+}

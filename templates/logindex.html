@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'logpg/main.css' %}">
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family: cursive;
+            background-image: url("{% static 'logpg/burger.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Login Here</h2>
+        <div>
+        {% for message in messages %}
+        <div style="color:rgb(230, 108, 27)">{{message}}</div>
+        {% endfor %}
+        </div>
+        <form action="login" method="POST" id="form2">
+            {% csrf_token %}
+            <div>
+                <input type="text" name="username" id="usrnm" placeholder="Enter username">
+            </div>
+            <div>
+                <input type="password" name="password" id="psd" placeholder="Enter password">
+            </div>
+            <button type="submit">Sign In</button>
+            <br>
+            <div class="links">
+                <a href="register">Not registered ?</a>
+                <a href="#">Forget password ?</a>
+            </div>     
+        </form>
+    </div>
+    <script src="{% static 'logpg/main.js' %}"></script>
+</body>
+</html>

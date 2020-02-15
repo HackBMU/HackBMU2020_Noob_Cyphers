@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'welcomepg/main.css' %}">
+    <style>
+       @keyframes changeBg
+        {
+        0%   {background-image: url("{% static 'welcomepg/images/s1.jpg' %}");background-size:cover;background-repeat: no-repeat;background-attachment: fixed;}
+        15%  {background-image: url("{% static 'welcomepg/images/s1.jpg' %}");background-size:cover;background-repeat: no-repeat;background-attachment: fixed;}
+        30%  {background-image: url("{% static 'welcomepg/images/s2.jpg' %}");background-size:cover;background-repeat: no-repeat;background-attachment: fixed;}
+        45%  {background-image: url("{% static 'welcomepg/images/s2.jpg' %}");background-size:cover;background-repeat: no-repeat;background-attachment: fixed;}
+        60%  {background-image: url("{% static 'welcomepg/images/s3.jpg' %}");background-size:cover;background-repeat: no-repeat;background-attachment: fixed;}
+        75%  {background-image: url("{% static 'welcomepg/images/s3.jpg' %}");background-size:cover;background-repeat: no-repeat;background-attachment: fixed;}
+        85%  {background-image: url("{% static 'welcomepg/images/s4.jpg' %}");background-size:cover;background-repeat: no-repeat;background-attachment: fixed;}
+        100% {background-image: url("{% static 'welcomepg/images/s4.jpg' %}");background-size:cover;background-repeat: no-repeat;background-attachment: fixed;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Hey Foodie !</h1>
+        <h2>Welcome to Foodopedia !</h2>
+        <a href="accounts/login">Join Us</a>
+    </div>
+</body>
+</html>

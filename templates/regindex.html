@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'regpg/main2.css' %}">
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family: cursive;
+            background-image: url("{% static 'regpg/burger.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Register Here</h2>
+        <div class="msg"></div>
+        <div style="color:rgb(243, 116, 12);">
+        {% for message in messages %}
+        <div>{{message}}</div>
+        {% endfor %}
+        </div>
+        <form action="register" method="POST" id="form2">
+            {% csrf_token %}
+            <div>
+                <input type="text" id="fnm" name="first_name" placeholder="First name">
+            </div>
+            <div>
+                <input type="text" id="lnm" name="last_name" placeholder="Last name">
+            </div>
+            <div>
+                <input type="text" id="usrnm" name="username" placeholder="Choose Username">
+            </div>
+            <div>
+                <input type="email" id="eml" name="email" placeholder="Choose email">
+            </div>
+            <div>
+                <input type="password" id="psd" name="password" placeholder="Choose password">
+            </div>
+            <button type="submit">Sign up</button>
+            <br>
+            <div class="links">
+                <a href="login">Already Registered ?</a>
+            </div>     
+        </form>
+    </div>
+    <script src="{% static 'regpg/mai.js' %}"></script>
+</body>
+</html>
